@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -O0 CMakeFiles/configTest.dir/ConfigTest.cpp.o -o ../../bin/configTest  -Wl,-rpath,/home/fengxu/mylib/HttpReactor/lib ../../lib/libconfig.so -llog 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O0 -shared -Wl,-soname,liblog.so -o ../../../lib/liblog.so CMakeFiles/log.dir/config.cpp.o CMakeFiles/log.dir/ini.cpp.o 

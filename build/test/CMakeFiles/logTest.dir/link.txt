@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -O0 CMakeFiles/logTest.dir/LogTest.cpp.o -o ../../bin/logTest  -Wl,-rpath,/home/fengxu/mylib/HttpReactor/lib ../../lib/liblog.so 
