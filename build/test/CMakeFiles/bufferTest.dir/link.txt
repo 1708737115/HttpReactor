@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -O0 CMakeFiles/bufferTest.dir/BufferTest.cpp.o -o ../../bin/bufferTest  -Wl,-rpath,/home/fengxu/mylib/HttpReactor/lib ../../lib/libBuffer.so 

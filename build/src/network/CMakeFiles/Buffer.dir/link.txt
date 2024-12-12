@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -O0 -shared -Wl,-soname,libBuffer.so -o ../../../lib/libBuffer.so CMakeFiles/Buffer.dir/Buffer.cpp.o 

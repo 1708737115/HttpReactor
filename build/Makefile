@@ -143,6 +143,19 @@ log/fast:
 .PHONY : log/fast
 
 #=============================================================================
+# Target rules for targets named Buffer
+
+# Build rule for target.
+Buffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Buffer
+.PHONY : Buffer
+
+# fast build rule for target.
+Buffer/fast:
+	$(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/build
+.PHONY : Buffer/fast
+
+#=============================================================================
 # Target rules for targets named logTest
 
 # Build rule for target.
@@ -155,6 +168,19 @@ logTest/fast:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/build
 .PHONY : logTest/fast
 
+#=============================================================================
+# Target rules for targets named bufferTest
+
+# Build rule for target.
+bufferTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bufferTest
+.PHONY : bufferTest
+
+# fast build rule for target.
+bufferTest/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/build
+.PHONY : bufferTest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,6 +189,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Buffer"
+	@echo "... bufferTest"
 	@echo "... config"
 	@echo "... log"
 	@echo "... logTest"

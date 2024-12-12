@@ -6,6 +6,10 @@
 /home/fengxu/mylib/HttpReactor/build/src/utils/CMakeFiles/log.dir
 /home/fengxu/mylib/HttpReactor/build/src/utils/CMakeFiles/edit_cache.dir
 /home/fengxu/mylib/HttpReactor/build/src/utils/CMakeFiles/rebuild_cache.dir
+/home/fengxu/mylib/HttpReactor/build/src/network/CMakeFiles/Buffer.dir
+/home/fengxu/mylib/HttpReactor/build/src/network/CMakeFiles/edit_cache.dir
+/home/fengxu/mylib/HttpReactor/build/src/network/CMakeFiles/rebuild_cache.dir
 /home/fengxu/mylib/HttpReactor/build/test/CMakeFiles/logTest.dir
+/home/fengxu/mylib/HttpReactor/build/test/CMakeFiles/bufferTest.dir
 /home/fengxu/mylib/HttpReactor/build/test/CMakeFiles/edit_cache.dir
 /home/fengxu/mylib/HttpReactor/build/test/CMakeFiles/rebuild_cache.dir

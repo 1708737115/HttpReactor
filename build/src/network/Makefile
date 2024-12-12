@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fengxu/mylib/HttpReactor/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles /home/fengxu/mylib/HttpReactor/build/test//CMakeFiles/progress.marks
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	cd /home/fengxu/mylib/HttpReactor/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles /home/fengxu/mylib/HttpReactor/build/src/network//CMakeFiles/progress.marks
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -117,80 +117,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/logTest.dir/rule:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/logTest.dir/rule
-.PHONY : test/CMakeFiles/logTest.dir/rule
+src/network/CMakeFiles/Buffer.dir/rule:
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/CMakeFiles/Buffer.dir/rule
+.PHONY : src/network/CMakeFiles/Buffer.dir/rule
 
 # Convenience name for target.
-logTest: test/CMakeFiles/logTest.dir/rule
-.PHONY : logTest
+Buffer: src/network/CMakeFiles/Buffer.dir/rule
+.PHONY : Buffer
 
 # fast build rule for target.
-logTest/fast:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/build
-.PHONY : logTest/fast
+Buffer/fast:
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/build
+.PHONY : Buffer/fast
 
-# Convenience name for target.
-test/CMakeFiles/bufferTest.dir/rule:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/bufferTest.dir/rule
-.PHONY : test/CMakeFiles/bufferTest.dir/rule
-
-# Convenience name for target.
-bufferTest: test/CMakeFiles/bufferTest.dir/rule
-.PHONY : bufferTest
-
-# fast build rule for target.
-bufferTest/fast:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/build
-.PHONY : bufferTest/fast
-
-BufferTest.o: BufferTest.cpp.o
-.PHONY : BufferTest.o
+Buffer.o: Buffer.cpp.o
+.PHONY : Buffer.o
 
 # target to build an object file
-BufferTest.cpp.o:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/BufferTest.cpp.o
-.PHONY : BufferTest.cpp.o
+Buffer.cpp.o:
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/Buffer.cpp.o
+.PHONY : Buffer.cpp.o
 
-BufferTest.i: BufferTest.cpp.i
-.PHONY : BufferTest.i
-
-# target to preprocess a source file
-BufferTest.cpp.i:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/BufferTest.cpp.i
-.PHONY : BufferTest.cpp.i
-
-BufferTest.s: BufferTest.cpp.s
-.PHONY : BufferTest.s
-
-# target to generate assembly for a file
-BufferTest.cpp.s:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/BufferTest.cpp.s
-.PHONY : BufferTest.cpp.s
-
-LogTest.o: LogTest.cpp.o
-.PHONY : LogTest.o
-
-# target to build an object file
-LogTest.cpp.o:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/LogTest.cpp.o
-.PHONY : LogTest.cpp.o
-
-LogTest.i: LogTest.cpp.i
-.PHONY : LogTest.i
+Buffer.i: Buffer.cpp.i
+.PHONY : Buffer.i
 
 # target to preprocess a source file
-LogTest.cpp.i:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/LogTest.cpp.i
-.PHONY : LogTest.cpp.i
+Buffer.cpp.i:
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/Buffer.cpp.i
+.PHONY : Buffer.cpp.i
 
-LogTest.s: LogTest.cpp.s
-.PHONY : LogTest.s
+Buffer.s: Buffer.cpp.s
+.PHONY : Buffer.s
 
 # target to generate assembly for a file
-LogTest.cpp.s:
-	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/LogTest.cpp.s
-.PHONY : LogTest.cpp.s
+Buffer.cpp.s:
+	cd /home/fengxu/mylib/HttpReactor/build && $(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/Buffer.cpp.s
+.PHONY : Buffer.cpp.s
 
 # Help Target
 help:
@@ -200,14 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bufferTest"
-	@echo "... logTest"
-	@echo "... BufferTest.o"
-	@echo "... BufferTest.i"
-	@echo "... BufferTest.s"
-	@echo "... LogTest.o"
-	@echo "... LogTest.i"
-	@echo "... LogTest.s"
+	@echo "... Buffer"
+	@echo "... Buffer.o"
+	@echo "... Buffer.i"
+	@echo "... Buffer.s"
 .PHONY : help
 
 

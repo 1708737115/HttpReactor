@@ -82,15 +82,33 @@ clean: test/clean
 
 # Recursive "all" directory target.
 src/all: src/utils/all
+src/all: src/network/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
 src/preinstall: src/utils/preinstall
+src/preinstall: src/network/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/utils/clean
+src/clean: src/network/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/network
+
+# Recursive "all" directory target.
+src/network/all: src/network/CMakeFiles/Buffer.dir/all
+.PHONY : src/network/all
+
+# Recursive "preinstall" directory target.
+src/network/preinstall:
+.PHONY : src/network/preinstall
+
+# Recursive "clean" directory target.
+src/network/clean: src/network/CMakeFiles/Buffer.dir/clean
+.PHONY : src/network/clean
 
 #=============================================================================
 # Directory level rules for directory src/utils
@@ -114,6 +132,7 @@ src/utils/clean: src/utils/CMakeFiles/log.dir/clean
 
 # Recursive "all" directory target.
 test/all: test/CMakeFiles/logTest.dir/all
+test/all: test/CMakeFiles/bufferTest.dir/all
 .PHONY : test/all
 
 # Recursive "preinstall" directory target.
@@ -122,6 +141,7 @@ test/preinstall:
 
 # Recursive "clean" directory target.
 test/clean: test/CMakeFiles/logTest.dir/clean
+test/clean: test/CMakeFiles/bufferTest.dir/clean
 .PHONY : test/clean
 
 #=============================================================================
@@ -131,7 +151,7 @@ test/clean: test/CMakeFiles/logTest.dir/clean
 src/utils/CMakeFiles/config.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/config.dir/build.make src/utils/CMakeFiles/config.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/config.dir/build.make src/utils/CMakeFiles/config.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=1,2,3 "Built target config"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=5,6,7 "Built target config"
 .PHONY : src/utils/CMakeFiles/config.dir/all
 
 # Build rule for subdir invocation for target.
@@ -157,7 +177,7 @@ src/utils/CMakeFiles/config.dir/clean:
 src/utils/CMakeFiles/log.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/log.dir/build.make src/utils/CMakeFiles/log.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/log.dir/build.make src/utils/CMakeFiles/log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=4,5,6 "Built target log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=8,9,10 "Built target log"
 .PHONY : src/utils/CMakeFiles/log.dir/all
 
 # Build rule for subdir invocation for target.
@@ -177,13 +197,39 @@ src/utils/CMakeFiles/log.dir/clean:
 .PHONY : src/utils/CMakeFiles/log.dir/clean
 
 #=============================================================================
+# Target rules for target src/network/CMakeFiles/Buffer.dir
+
+# All Build rule for target.
+src/network/CMakeFiles/Buffer.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=1,2 "Built target Buffer"
+.PHONY : src/network/CMakeFiles/Buffer.dir/all
+
+# Build rule for subdir invocation for target.
+src/network/CMakeFiles/Buffer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/CMakeFiles/Buffer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles 0
+.PHONY : src/network/CMakeFiles/Buffer.dir/rule
+
+# Convenience name for target.
+Buffer: src/network/CMakeFiles/Buffer.dir/rule
+.PHONY : Buffer
+
+# clean rule for target.
+src/network/CMakeFiles/Buffer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/Buffer.dir/build.make src/network/CMakeFiles/Buffer.dir/clean
+.PHONY : src/network/CMakeFiles/Buffer.dir/clean
+
+#=============================================================================
 # Target rules for target test/CMakeFiles/logTest.dir
 
 # All Build rule for target.
 test/CMakeFiles/logTest.dir/all: src/utils/CMakeFiles/log.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=7,8 "Built target logTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=11,12 "Built target logTest"
 .PHONY : test/CMakeFiles/logTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,6 +247,32 @@ logTest: test/CMakeFiles/logTest.dir/rule
 test/CMakeFiles/logTest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/logTest.dir/build.make test/CMakeFiles/logTest.dir/clean
 .PHONY : test/CMakeFiles/logTest.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/bufferTest.dir
+
+# All Build rule for target.
+test/CMakeFiles/bufferTest.dir/all: src/network/CMakeFiles/Buffer.dir/all
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fengxu/mylib/HttpReactor/build/CMakeFiles --progress-num=3,4 "Built target bufferTest"
+.PHONY : test/CMakeFiles/bufferTest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/bufferTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/bufferTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fengxu/mylib/HttpReactor/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/bufferTest.dir/rule
+
+# Convenience name for target.
+bufferTest: test/CMakeFiles/bufferTest.dir/rule
+.PHONY : bufferTest
+
+# clean rule for target.
+test/CMakeFiles/bufferTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/bufferTest.dir/build.make test/CMakeFiles/bufferTest.dir/clean
+.PHONY : test/CMakeFiles/bufferTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
+  "../src/network/CMakeLists.txt"
   "../src/utils/CMakeLists.txt"
   "../test/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
@@ -44,6 +45,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/utils/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/network/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -51,5 +53,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/utils/CMakeFiles/config.dir/DependInfo.cmake"
   "src/utils/CMakeFiles/log.dir/DependInfo.cmake"
+  "src/network/CMakeFiles/Buffer.dir/DependInfo.cmake"
   "test/CMakeFiles/logTest.dir/DependInfo.cmake"
+  "test/CMakeFiles/bufferTest.dir/DependInfo.cmake"
   )
